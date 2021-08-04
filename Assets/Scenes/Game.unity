@@ -155,6 +155,12 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: d11936f61c90adb47bfe8443c62172c5, type: 2}
   - {fileID: 11400000, guid: d5de260c1a94be743818f9cf272f106d, type: 2}
+  - {fileID: 11400000, guid: cacf73581451fa246a9b1402dda86201, type: 2}
+  - {fileID: 11400000, guid: aab415541740911468d3b725730bf8d2, type: 2}
+  - {fileID: 11400000, guid: 1df2b635688aa3a499f26af9ca3e5515, type: 2}
+  - {fileID: 11400000, guid: 2fe2f9897ff2d184e832536b9139f82d, type: 2}
+  - {fileID: 11400000, guid: 17d575cf373e33d409c56b4933e84ff8, type: 2}
+  - {fileID: 11400000, guid: 964716e86a0bcb64f868b472dd25f65f, type: 2}
   timeBetweenWaves: 0
   isLooping: 1
 --- !u!4 &118917955
