@@ -269,6 +269,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac4ba865b1205241b2e0838ac4262e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPackType:
+  - {fileID: 21300000, guid: ccc38878c9cfe1d4894a936fd7bef9b9, type: 3}
+  - {fileID: 21300000, guid: 8cafefffcfa7f424987cd2329cd1c809, type: 3}
+  percentChanceBlue: 50
+  percentChanceRed: 25
+  greenRecoveryPercentage: 0.15
+  blueRecoveryPercentage: 0.2
+  redRecoveryPercentage: 0.25
 --- !u!1 &118917953
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +879,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.3
+  m_fontSize: 20
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
