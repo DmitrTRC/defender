@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +25,8 @@ public class HealthPack : MonoBehaviour
         {
             print("Health pack collided with player");
             var health = trigger.gameObject.GetComponent<Health>();
-            health.IncreaseHealth(30);
+            health.IncreaseHealth(_recoveryPercentage);
+                          
             Destroy(gameObject);
         }
     }

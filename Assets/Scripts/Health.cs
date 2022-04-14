@@ -1,9 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //TODO: Make HealthPack appear in random locations when enemy dies
-//TODO: HealthPack increases health over 100%
 //TODO: Make Colorful gradient for health bar
 
 public class Health : MonoBehaviour
