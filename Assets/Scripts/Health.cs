@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: Make HealthPack appear in random locations when enemy dies
+//TODO: HealthPack increases health over 100%
+//TODO: Make Colorful gradient for health bar
+
 public class Health : MonoBehaviour
 {
+    [Range(50, 300)] public int maxHealth = 100;
+
     [SerializeField] bool isPlayer;
-    [SerializeField] int health = 50;
+    [SerializeField] int health = 100;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -27,12 +33,7 @@ public class Health : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
-        // if (other.GetComponent<HealthPack>())
-        // {
-        //     print("Health Object : Get Pack");
-        //     health += damageDealer.GetDamage();
-        //     Destroy(other.gameObject);
-        // }
+
         if (damageDealer != null)
         {
             TakeDamage(damageDealer.GetDamage());
@@ -48,9 +49,13 @@ public class Health : MonoBehaviour
         return health;
     }
 
-    public void IncreaseHealth(int delta)
+    public void IncreaseHealth(float percentToRecover)
     {
-        this.health += delta;
+        health += (int) (health * percentToRecover);
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
     void TakeDamage(int damage)
