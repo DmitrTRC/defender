@@ -27,8 +27,13 @@ public class Health : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
-
-        if(damageDealer != null)
+        // if (other.GetComponent<HealthPack>())
+        // {
+        //     print("Health Object : Get Pack");
+        //     health += damageDealer.GetDamage();
+        //     Destroy(other.gameObject);
+        // }
+        if (damageDealer != null)
         {
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
@@ -43,10 +48,15 @@ public class Health : MonoBehaviour
         return health;
     }
 
+    public void IncreaseHealth(int delta)
+    {
+        this.health += delta;
+    }
+
     void TakeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -54,7 +64,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        if(!isPlayer)
+        if (!isPlayer)
         {
             scoreKeeper.ModifyScore(score);
         }
@@ -62,12 +72,13 @@ public class Health : MonoBehaviour
         {
             levelManager.LoadGameOver();
         }
+
         Destroy(gameObject);
     }
 
     void PlayHitEffect()
     {
-        if(hitEffect != null)
+        if (hitEffect != null)
         {
             ParticleSystem instance = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
@@ -76,7 +87,7 @@ public class Health : MonoBehaviour
 
     void ShakeCamera()
     {
-        if(cameraShake != null && applyCameraShake)
+        if (cameraShake != null && applyCameraShake)
         {
             cameraShake.Play();
         }
