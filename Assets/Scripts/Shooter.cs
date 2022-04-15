@@ -20,6 +20,8 @@ public class Shooter : MonoBehaviour
     Coroutine firingCoroutine;
     AudioPlayer audioPlayer;
 
+    
+
     void Awake()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();

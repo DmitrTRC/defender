@@ -8,6 +8,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Range(50, 300)] public int maxHealth = 100;
+    [Range(0, 100)] public float chanceToDropHealthPack = 50f;
 
     [SerializeField] bool isPlayer;
     [SerializeField] int health = 100;
@@ -21,12 +22,15 @@ public class Health : MonoBehaviour
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
 
+   [SerializeField] GameObject Hp;
+
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
+        Hp = GameObject.Find("HealthPack");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -50,7 +54,7 @@ public class Health : MonoBehaviour
 
     public void IncreaseHealth(float percentToRecover)
     {
-        health += (int) (health * percentToRecover);
+        health += (int)(health * percentToRecover);
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -66,11 +70,15 @@ public class Health : MonoBehaviour
         }
     }
 
+    //TODO: Add HealthPack when enemy dies
     void Die()
     {
+        //print("It's a : " + gameObject.name);
         if (!isPlayer)
         {
+            RollForHealthPack();
             scoreKeeper.ModifyScore(score);
+            print("Enemy died");
         }
         else
         {
@@ -78,6 +86,18 @@ public class Health : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    void RollForHealthPack()
+    {
+        int roll = Random.Range(0, 100);
+        if (roll <= chanceToDropHealthPack)
+        {
+            print("Dropped health pack");
+            GameObject newHP = Instantiate(Hp, transform.position, Quaternion.identity);
+            print("newHP: " + newHP);
+            return;
+        }
     }
 
     void PlayHitEffect()
