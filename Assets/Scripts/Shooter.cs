@@ -20,7 +20,7 @@ public class Shooter : MonoBehaviour
     Coroutine firingCoroutine;
     AudioPlayer audioPlayer;
 
-    
+
 
     void Awake()
     {
@@ -29,7 +29,7 @@ public class Shooter : MonoBehaviour
 
     void Start()
     {
-        if(useAI)
+        if (useAI)
         {
             isFiring = true;
         }
@@ -46,7 +46,7 @@ public class Shooter : MonoBehaviour
         {
             firingCoroutine = StartCoroutine(FireContinuously());
         }
-        else if(!isFiring && firingCoroutine != null)
+        else if (!isFiring && firingCoroutine != null)
         {
             StopCoroutine(firingCoroutine);
             firingCoroutine = null;
@@ -55,14 +55,14 @@ public class Shooter : MonoBehaviour
 
     IEnumerator FireContinuously()
     {
-        while(true)
+        while (true)
         {
-            GameObject instance = Instantiate(projectilePrefab, 
-                                            transform.position, 
+            GameObject instance = Instantiate(projectilePrefab,
+                                            transform.position,
                                             Quaternion.identity);
 
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-            if(rb != null)
+            if (rb != null)
             {
                 rb.velocity = transform.up * projectileSpeed;
             }
@@ -78,4 +78,5 @@ public class Shooter : MonoBehaviour
             yield return new WaitForSeconds(timeToNextProjectile);
         }
     }
+  
 }

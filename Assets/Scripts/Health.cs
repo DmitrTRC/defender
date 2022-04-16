@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
 
-   [SerializeField] GameObject Hp;
+    public GameObject Hp;
 
     void Awake()
     {
@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
-        Hp = GameObject.Find("HealthPack");
+        Hp = GameObject.Find("hPack");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -76,7 +76,6 @@ public class Health : MonoBehaviour
         //print("It's a : " + gameObject.name);
         if (!isPlayer)
         {
-            RollForHealthPack();
             scoreKeeper.ModifyScore(score);
             print("Enemy died");
         }
@@ -95,8 +94,7 @@ public class Health : MonoBehaviour
         {
             print("Dropped health pack");
             GameObject newHP = Instantiate(Hp, transform.position, Quaternion.identity);
-            print("newHP: " + newHP);
-            return;
+
         }
     }
 
@@ -116,4 +114,13 @@ public class Health : MonoBehaviour
             cameraShake.Play();
         }
     }
+    void OnDestroy()
+    {
+        if (!isPlayer)
+        {
+            RollForHealthPack();
+        }
+    }
 }
+
+

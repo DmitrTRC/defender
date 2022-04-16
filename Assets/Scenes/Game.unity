@@ -728,7 +728,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.4
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1158,19 +1158,23 @@ PrefabInstance:
     - target: {fileID: -6001022227262058683, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: HP
       value: 
-      objectReference: {fileID: 2757118271565444525}
+      objectReference: {fileID: 0}
     - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: HP
       value: 
-      objectReference: {fileID: 2757118271565444525}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
+      propertyPath: Hp
+      value: 
+      objectReference: {fileID: 2757118271536678792, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
     - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: healthPack
       value: 
-      objectReference: {fileID: 2757118271565444525}
+      objectReference: {fileID: 0}
     - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: healthPackPrefab
       value: 
-      objectReference: {fileID: 2757118271565444525}
+      objectReference: {fileID: 0}
     - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: chanceToDropHealthPack
       value: 81.6
@@ -1232,74 +1236,6 @@ PrefabInstance:
     - {fileID: 5068972305013754555, guid: 09b79165dd08627409bd32682a16c396, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 09b79165dd08627409bd32682a16c396, type: 3}
---- !u!1001 &2757118271565444524
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678789, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678790, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: percentChanceBlue
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 2757118271536678792, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-      propertyPath: m_Name
-      value: HealthPack
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
---- !u!1 &2757118271565444525 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2757118271536678792, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
-  m_PrefabInstance: {fileID: 2757118271565444524}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5049669443329839096
 PrefabInstance:
   m_ObjectHideFlags: 0
