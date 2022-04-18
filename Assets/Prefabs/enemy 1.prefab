@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3127101684111938468}
   m_RootOrder: 0
@@ -115,6 +116,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3076556302888855089}
   m_Father: {fileID: 0}
@@ -181,11 +183,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5766316de7b2b14da317afba72c5d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 80
+  chanceToDropHealthPack: 70.2
   isPlayer: 0
-  health: 40
-  score: 50
+  health: 30
+  score: 100
   hitEffect: {fileID: 8503272965454256792, guid: b15eb2c359ab50248a18f66e70416afd, type: 3}
   applyCameraShake: 0
+  Hp: {fileID: 2757118271536678792, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
 --- !u!114 &181910202121252935
 MonoBehaviour:
   m_ObjectHideFlags: 0

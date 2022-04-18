@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
-        Hp = GameObject.Find("hPack");
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
     {
         return health;
     }
-
+//TODO: Balance health
     public void IncreaseHealth(float percentToRecover)
     {
         health += (int)(health * percentToRecover);
@@ -76,6 +76,7 @@ public class Health : MonoBehaviour
         //print("It's a : " + gameObject.name);
         if (!isPlayer)
         {
+            RollForHealthPack();
             scoreKeeper.ModifyScore(score);
             print("Enemy died");
         }
@@ -93,7 +94,9 @@ public class Health : MonoBehaviour
         if (roll <= chanceToDropHealthPack)
         {
             print("Dropped health pack");
-            GameObject newHP = Instantiate(Hp, transform.position, Quaternion.identity);
+
+            GameObject newHP = Instantiate(Hp, transform.position, Quaternion.identity) as GameObject;
+            print("newHP: " + newHP);
 
         }
     }
@@ -114,13 +117,15 @@ public class Health : MonoBehaviour
             cameraShake.Play();
         }
     }
-    void OnDestroy()
-    {
-        if (!isPlayer)
-        {
-            RollForHealthPack();
-        }
-    }
 }
+//     void OnDestroy()
+//     {
+//         if (!isPlayer)
+//         {
+//             print("Enemy destructor running");
+//             RollForHealthPack();
+//         }
+//     }
+// }
 
 

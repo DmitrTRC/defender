@@ -152,5 +152,5 @@ MonoBehaviour:
   percentChanceBlue: 50
   percentChanceRed: 25
   greenRecoveryPercentage: 0.15
-  blueRecoveryPercentage: 0.2
-  redRecoveryPercentage: 0.25
+  blueRecoveryPercentage: 0.185
+  redRecoveryPercentage: 0.298

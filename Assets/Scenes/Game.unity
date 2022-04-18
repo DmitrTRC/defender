@@ -728,7 +728,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.55
+  m_fontSize: 22.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1167,6 +1167,14 @@ PrefabInstance:
       propertyPath: Hp
       value: 
       objectReference: {fileID: 2757118271536678792, guid: fa28bd05ab8b348628c00da1a38f4fa7, type: 3}
+    - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3005095620657558478, guid: 09b79165dd08627409bd32682a16c396, type: 3}
       propertyPath: healthPack
       value: 
