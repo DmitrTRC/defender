@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
 //TODO: Balance health
     public void IncreaseHealth(float percentToRecover)
     {
-        health += (int)(health * percentToRecover);
+        health += (int)(100 * percentToRecover);
         if (health > maxHealth)
         {
             health = maxHealth;
