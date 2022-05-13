@@ -118,14 +118,6 @@ public class Health : MonoBehaviour
         }
     }
 }
-//     void OnDestroy()
-//     {
-//         if (!isPlayer)
-//         {
-//             print("Enemy destructor running");
-//             RollForHealthPack();
-//         }
-//     }
-// }
+
 
 
